@@ -1,0 +1,201 @@
+// contents
+
+// *
+// body
+// img
+// h1,h2,h3,p
+// .container
+//   header
+//   ,form-section
+//     form
+//       .form-box
+//       .form-label
+//       .form-input
+//       .form-button
+//       #errorBox
+//   footer
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+	color: #fff;
+}
+
+.container {
+	background: url('../assets/images/bg-body.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: auto;
+
+	header {
+		min-height: 50vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background: url('../assets/images/bg-header.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@media (min-width: 600px) {
+			min-height: 80vh;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			font-weight: 800;
+			text-shadow: 2px 2px #000;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	} //header ends
+
+	section.form-section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		padding-top: 10px;
+
+		h2 {
+			font-size: 1.125rem;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		h3 {
+			font-size: 1rem;
+			margin-top: 10px;
+		}
+
+		form {
+			.form-box {
+				background: #fff;
+				margin: 20px;
+				border-radius: 10px;
+
+				.form-label {
+					font-weight: 700;
+					padding: 10px;
+					border-bottom: 1px solid black;
+				} //form label ends
+
+				.form-input {
+					display: flex;
+					align-items: center;
+					padding: 10px;
+
+					img {
+						width: 20px;
+					}
+
+					select {
+						margin-left: 10px;
+						background: #fff;
+						font-size: 1rem;
+						font-weight: 800;
+						border: none;
+					}
+
+					input {
+						width: 100%;
+						margin-left: 10px;
+						font-size: 1rem;
+						font-weight: 800;
+						border: none;
+
+						&:focus {
+							outline: none;
+							border-bottom: 2px solid #000;
+						}
+
+						// to hide input number counter arrows
+						-moz-appearance: textfield; //for firefox
+
+						// for chrome, safari, edge, opera
+						&::-webkit-inner-spin-button,
+						&::-webkit-outer-spin-button {
+							-webkit-appearance: none;
+							margin: 0;
+						}
+					}
+				} //form input ends
+			} //form box ends
+
+			.form-button {
+				margin: 20px;
+				button {
+					width: 100%;
+					background: #fa902c;
+					display: flex;
+					box-shadow: 0 8px 0 rgba(255, 255, 255, 0.2) inset,
+						0px -8px 5px 1px rgba(0, 0, 0, 0.4) inset;
+					border: none;
+					border-radius: 30px;
+
+					&:hover {
+						cursor: pointer;
+						img {
+							transition: 0.5s transform;
+							transform: translate(10px, 0px);
+						}
+					}
+
+					span {
+						color: #fff;
+						width: 80%;
+						padding: 20px;
+						font-size: 1.75rem;
+						font-weight: 800;
+						text-transform: uppercase;
+						border-right: 2px solid #fff;
+					}
+
+					img {
+						width: 60px;
+						padding: 10px 0 10px 20px;
+						filter: invert(1);
+						opacity: 0.5;
+					}
+				}
+			} //form button ends
+
+			#errorBox {
+				color: red;
+				display: none;
+			}
+			#errorBox.show {
+				display: block;
+			}
+		} // form ends
+	} // form section ends
+
+	footer {
+		font-size: 0.75rem;
+		text-align: center;
+		margin-top: 50px;
+		padding: 10px;
+	} //footer ends
+} //container ends

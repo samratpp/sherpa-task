@@ -1,0 +1,214 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  color: #fff;
+}
+
+.container {
+  background: url("../assets/images/bg-body.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+}
+
+.container header {
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("../assets/images/bg-header.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 600px) {
+  .container header {
+    min-height: 80vh;
+  }
+}
+
+.container header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-shadow: 2px 2px #000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container section.form-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.container section.form-section h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.container section.form-section h3 {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.container section.form-section form .form-box {
+  background: #fff;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.container section.form-section form .form-box .form-label {
+  font-weight: 700;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.container section.form-section form .form-box .form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.container section.form-section form .form-box .form-input img {
+  width: 20px;
+}
+
+.container section.form-section form .form-box .form-input select {
+  margin-left: 10px;
+  background: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  border: none;
+}
+
+.container section.form-section form .form-box .form-input input {
+  width: 100%;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: 800;
+  border: none;
+  -moz-appearance: textfield;
+}
+
+.container section.form-section form .form-box .form-input input:focus {
+  outline: none;
+  border-bottom: 2px solid #000;
+}
+
+.container section.form-section form .form-box .form-input input::-webkit-inner-spin-button, .container section.form-section form .form-box .form-input input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container section.form-section form .form-button {
+  margin: 20px;
+}
+
+.container section.form-section form .form-button button {
+  width: 100%;
+  background: #fa902c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 8px 0 rgba(255, 255, 255, 0.2) inset, 0px -8px 5px 1px rgba(0, 0, 0, 0.4) inset;
+          box-shadow: 0 8px 0 rgba(255, 255, 255, 0.2) inset, 0px -8px 5px 1px rgba(0, 0, 0, 0.4) inset;
+  border: none;
+  border-radius: 30px;
+}
+
+.container section.form-section form .form-button button:hover {
+  cursor: pointer;
+}
+
+.container section.form-section form .form-button button:hover img {
+  -webkit-transition: 0.5s -webkit-transform;
+  transition: 0.5s -webkit-transform;
+  transition: 0.5s transform;
+  transition: 0.5s transform, 0.5s -webkit-transform;
+  -webkit-transform: translate(10px, 0px);
+          transform: translate(10px, 0px);
+}
+
+.container section.form-section form .form-button button span {
+  color: #fff;
+  width: 80%;
+  padding: 20px;
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-right: 2px solid #fff;
+}
+
+.container section.form-section form .form-button button img {
+  width: 60px;
+  padding: 10px 0 10px 20px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  opacity: 0.5;
+}
+
+.container section.form-section form #errorBox {
+  color: red;
+  display: none;
+}
+
+.container section.form-section form #errorBox.show {
+  display: block;
+}
+
+.container footer {
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 50px;
+  padding: 10px;
+}
+/*# sourceMappingURL=style.css.map */
